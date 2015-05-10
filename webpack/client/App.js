@@ -66,7 +66,7 @@ var App = React.createClass({
             ...{ credits: s.credits }
           }))}
         />
-        <footer>
+        <footer className="App--footer">
           <a href="https://github.com/glenjamin/magic-of-hot-code">
             View Source on GitHub
           </a>
