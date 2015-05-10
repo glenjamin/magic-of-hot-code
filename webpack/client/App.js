@@ -36,8 +36,12 @@ var App = React.createClass({
     };
     return (
       <div>
-        <h1>Emojifight</h1>
-        <p>{this.state.credits} credits</p>
+        <h1 className="App--header">
+          💢<strong>EmojiFighter</strong>💢
+        </h1>
+        <p className="App--credits">
+          {this.state.credits} credits
+        </p>
         <Step
           step={this.state.step}
 

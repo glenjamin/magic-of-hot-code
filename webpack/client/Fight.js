@@ -13,7 +13,7 @@ var Fight = React.createClass({
       this.setState({ leftEmoji: null, rightEmoji: '💥' }), 2000);
     setTimeout(() =>
       this.setState({ leftEmoji: null, rightEmoji: null }), 3000);
-    var loser = win ? 'leftEmoji': 'rightEmoji';
+    var loser = win ? 'rightEmoji': 'leftEmoji';
     setTimeout(() => this.setState({ [loser]: '💥' }), 3200);
     setTimeout(() => {
       this.setState({ [loser]: '💀', win: win });
@@ -21,8 +21,8 @@ var Fight = React.createClass({
       this.props.payout(win ? n : -1 * n);
     }, 4000);
   },
-  componentWillReceiveProps() {
-    //this.componentDidMount();
+  componentWillUnmount() {
+    delete window.replayFight;//eslint-disable-line
   },
   getInitialState() {
     return {
@@ -32,6 +32,10 @@ var Fight = React.createClass({
     };
   },
   render() {
+    window.replayFight = () => {//eslint-disable-line
+      this.setState(this.getInitialState());
+      this.componentDidMount();
+    };
     var {cpu} = this.props;
     return (
       <div>
@@ -57,9 +61,9 @@ var Fight = React.createClass({
         </div>
         <div className="Fight--summary">
           {this.state.win === true &&
-            <p>You won {this.props.stake} credits</p>}
+            <p>You won {this.props.stake} credits!</p>}
           {this.state.win === false &&
-            <p>You lost {this.props.stake} credits</p>}
+            <p>You lost {this.props.stake} credits!</p>}
           {this.state.win !== null &&
             <button onClick={this.props.reset}>
               Play Again
