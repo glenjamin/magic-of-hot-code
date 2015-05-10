@@ -1,0 +1,24 @@
+{
+  "name": "magic-of-hot-code-example",
+  "version": "1.0.0",
+  "description": "Demo of magic",
+  "author": "Glen Mailer <glenjamin@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^5.1.11",
+    "babel-eslint": "^3.1.1",
+    "babel-loader": "^5.0.0",
+    "babel-runtime": "^5.2.17",
+    "css-loader": "^0.12.0",
+    "eslint": "^0.21.0",
+    "eslint-plugin-react": "^2.2.0",
+    "react-hot-loader": "^1.2.2",
+    "style-loader": "^0.12.2",
+    "webpack": "^1.7.2",
+    "webpack-dev-server": "^1.7.0"
+  },
+  "dependencies": {
+    "classnames": "^2.1.1",
+    "react": "^0.13.0"
+  }
+}

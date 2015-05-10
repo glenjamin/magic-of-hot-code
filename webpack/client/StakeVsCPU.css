@@ -1,0 +1,24 @@
+.StakeVsCPU--headsup {
+    width: 100%;
+    display: table;
+}
+.StakeVsCPU--headsup-item {
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+}
+
+.StakeVsCPU--betting {
+    text-align: center;
+}
+
+.StakeVsCPU--input {
+    text-align: center;
+}
+.StakeVsCPU--input__invalid {
+    background-color: #fdd;
+}
+
+.StakeVsCPU--submit {
+    padding: 10px;
+}

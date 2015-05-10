@@ -1,0 +1,13 @@
+.Fight--headsup {
+    width: 100%;
+    display: table;
+}
+.Fight--headsup-item {
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+}
+
+.Fight--summary {
+    text-align: center;
+}

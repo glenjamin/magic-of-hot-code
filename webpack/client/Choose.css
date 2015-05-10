@@ -1,0 +1,28 @@
+.Choose--nav {
+    width: 100%;
+    display: table;
+}
+.Choose--nav-item {
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+}
+
+.Choose--table {
+    width: 100%;
+}
+.Choose--table th,
+.Choose--table td {
+    padding: 5px;
+}
+
+.Choose--table td {
+    text-align: center;
+}
+.Choose--table .Choose--name {
+    text-align: left;
+}
+
+.Choose--row__selected {
+    background-color: #ccc;
+}
