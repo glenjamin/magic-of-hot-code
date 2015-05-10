@@ -66,6 +66,11 @@ var App = React.createClass({
             ...{ credits: s.credits }
           }))}
         />
+        <footer>
+          <a href="https://github.com/glenjamin/magic-of-hot-code">
+            View Source on GitHub
+          </a>
+        </footer>
       </div>
     );
   }
