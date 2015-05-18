@@ -48,7 +48,7 @@ var ChooseWarrior = React.createClass({
             </button>
           </div>
         </div>
-        <table className="Choose--table">
+        <table className="Choose--table" cellSpacing="0">
           <thead>
             <tr>
               <th></th>

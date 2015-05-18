@@ -14,6 +14,9 @@
 
 .StakeVsCPU--input {
     text-align: center;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border-style: solid;
 }
 .StakeVsCPU--input__invalid {
     background-color: #fdd;

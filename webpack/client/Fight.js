@@ -6,20 +6,20 @@ require('./Fight.css');
 
 var Fight = React.createClass({
   componentDidMount() {
-    var win = Math.random() < 0.5;
+    var win = Math.random() < 0.1;
     setTimeout(() =>
-      this.setState({ leftEmoji: '💥' }), 1000);
+      this.setState({ leftEmoji: '💥' }), 500);
     setTimeout(() =>
-      this.setState({ leftEmoji: null, rightEmoji: '💥' }), 2000);
+      this.setState({ leftEmoji: null, rightEmoji: '💥' }), 1000);
     setTimeout(() =>
-      this.setState({ leftEmoji: null, rightEmoji: null }), 3000);
+      this.setState({ leftEmoji: null, rightEmoji: null }), 1500);
     var loser = win ? 'rightEmoji': 'leftEmoji';
-    setTimeout(() => this.setState({ [loser]: '💥' }), 3200);
+    setTimeout(() => this.setState({ [loser]: '💥' }), 1600);
     setTimeout(() => {
       this.setState({ [loser]: '💀', win: win });
       var n = this.props.stake;
       this.props.payout(win ? n : -1 * n);
-    }, 4000);
+    }, 2000);
   },
   componentWillUnmount() {
     delete window.replayFight;//eslint-disable-line
@@ -61,7 +61,7 @@ var Fight = React.createClass({
         </div>
         <div className="Fight--summary">
           {this.state.win === true &&
-            <p>You won {this.props.stake} credits!</p>}
+            <p>Congratulations, You won {this.props.stake} credits!</p>}
           {this.state.win === false &&
             <p>You lost {this.props.stake} credits!</p>}
           {this.state.win !== null &&

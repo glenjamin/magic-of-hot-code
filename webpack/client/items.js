@@ -1,7 +1,7 @@
 module.exports = {
   'knife': {
     emoji: '🔪',
-    name: 'Naughty Knife',
+    name: 'Nasty Knife',
     stats: {
       'str': +2,
       'dex': +1,

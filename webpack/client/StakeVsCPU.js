@@ -31,6 +31,9 @@ var StakeVsCPU = React.createClass({
       this.setState({ stake: 0 });
       return;
     }
+    if (!this.stakeValid()) {
+      return;
+    }
     this.props.update({ stake: parseFloat(this.state.stake) });
     this.props.next();
   },
@@ -38,6 +41,7 @@ var StakeVsCPU = React.createClass({
     return (
       (this.state.stake === null) ||
       (this.state.stake > 0) &&
+      (parseInt(this.state.stake) == this.state.stake) &&
       (this.state.stake <= this.props.credits)
     );
   },
@@ -69,7 +73,7 @@ var StakeVsCPU = React.createClass({
         >
           <h3>
             <label htmlFor="stake">
-              Enter Bet Amount
+              Enter Your Stake
             </label>
           </h3>
           <p>
